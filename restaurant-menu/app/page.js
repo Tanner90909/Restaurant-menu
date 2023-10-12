@@ -5,6 +5,7 @@ import axios from 'axios'
 import Logo from './components/Logo'
 import NavBar from './components/NavBar'
 import Carousel from './components/Carousel'
+import Footer from './components/Footer'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 
@@ -30,6 +31,11 @@ export default function Home() {
         <div className='row mt-5'>
           <div className='col-12'>
             <Carousel />
+          </div>
+        </div>
+        <div className='row'>
+          <div className='col-12'>
+            <Footer />
           </div>
         </div>
       </div>
