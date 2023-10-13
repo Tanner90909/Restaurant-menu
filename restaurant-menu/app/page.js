@@ -5,11 +5,11 @@ import axios from 'axios'
 import Logo from './components/Logo'
 import NavBar from './components/NavBar'
 import Carousel from './components/Carousel'
-import Accordion from './components/accordion'
+import Accordion from './components/Accordion'
 import Footer from './components/Footer'
 import { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
-// import 'bootstrap/dist/js/bootstrap.min.js'
+import 'bootstrap/dist/js/bootstrap.min.js'
 
 export default function Home() {
   const [state, setState] = useState([]);
