@@ -1,6 +1,22 @@
 import React from "react"
+import { fetchMenuItems } from "./Api";
+
 
 export default function Accordion(){
+
+    const drinksText = document.getElementsByClassName("accordion-body1")
+    
+        const fetchData = async () => {
+            try {
+                const drinksCall = await fetchMenuItems();
+                drinksText.textContent = drinksCall;
+                
+            } catch (error) {
+                console.error('Error fetching menu items:', error);
+            }
+        }
+        
+
     return(
         <div>
             <div className="accordion accordion-flush" id="accordionFlushExample">
@@ -11,7 +27,7 @@ export default function Accordion(){
                         </button>
                     </h2>
                     <div id="flush-collapseOne" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                        <div className="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> className. This is the first item's accordion body.</div>
+                        <div className="accordion-body1"></div>
                     </div>
                 </div>
                 <div className="accordion-item">

@@ -1,19 +1,30 @@
 "use client"
 import styles from './page.module.css'
-import React, { useState } from 'react'
+import React from 'react'
 import axios from 'axios'
 import Logo from './components/Logo'
 import NavBar from './components/NavBar'
 import Carousel from './components/Carousel'
 import Accordion from './components/accordion'
 import Footer from './components/Footer'
-import { FetchMenuItems } from './components/api'
+import { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap/dist/js/bootstrap.min.js'
+// import 'bootstrap/dist/js/bootstrap.min.js'
 
 export default function Home() {
-  let axiosCall = axios.get('https://www.jsonkeeper.com/b/MDXW');
-  console.log(axiosCall);
+  const [state, setState] = useState([]);
+
+  useEffect(() => {
+  async function axiosCall() {
+  let response = await axios.get('https://www.jsonkeeper.com/b/MDXW');
+  setState(response)
+  console.log(state)
+  };
+  axiosCall()
+}, []);
+
+
+console.log(state.data)
 
   return (
     <main className={styles.main}>
@@ -35,7 +46,8 @@ export default function Home() {
             <Carousel />
           </div>
         </div>
-        <div className='row'>
+        <div className='row text-center mt-5'>
+          <h1>Menu</h1>
           <div className='col-12'>
             <Accordion />
           </div>
