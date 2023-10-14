@@ -18,15 +18,23 @@ export default function Accordion({menuData}){
                     </h2>
                     <div id="flush-collapseOne" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                         <div className="accordion-body1">
-                            {
-                                menuDrinkItem.map((item) => (
-                                    <div>
-                                        <h3>{item.title}</h3>
-                                        <p>{item.description}</p>
-                                        <p>{item.price}</p>
-                                    </div>   
-                                ))
-                            }
+                            <div className="container">
+                                <div className="row">
+                                    {
+                                        menuDrinkItem.map((item) => (
+                                            <div className="col-4">
+                                            <div className="card">
+                                                <div className="card-body">
+                                                    <h5 className="card-title">{item.title}</h5>
+                                                    <h6 className="card-subtitle mb-2 text-body-secondary">{item.description}</h6>
+                                                    <p className="card-text">${item.price}</p>
+                                                </div>
+                                            </div>  
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -38,15 +46,23 @@ export default function Accordion({menuData}){
                     </h2>
                     <div id="flush-collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                         <div className="accordion-body">
-                            {
-                                menuAppetizerItem.map((item) => (
-                                    <div>
-                                        <h3>{item.title}</h3>
-                                        <p>{item.description}</p>
-                                        <p>{item.price}</p>
-                                    </div>   
-                                ))
-                            }
+                            <div className="container">
+                                <div className="row">
+                                    {
+                                        menuAppetizerItem.map((item) => (
+                                            <div className="col-4">
+                                            <div className="card">
+                                                <div className="card-body">
+                                                    <h5 className="card-title">{item.title}</h5>
+                                                    <h6 className="card-subtitle mb-2 text-body-secondary">{item.description}</h6>
+                                                    <p className="card-text">${item.price}</p>
+                                                </div>
+                                            </div>  
+                                            </div>
+                                        ))
+                                     }
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -58,15 +74,23 @@ export default function Accordion({menuData}){
                     </h2>
                     <div id="flush-collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                         <div className="accordion-body">
-                            {
-                                menuBreakfastItem.map((item) => (
-                                    <div>
-                                        <h3>{item.title}</h3>
-                                        <p>{item.description}</p>
-                                        <p>{item.price}</p>
-                                    </div>   
-                                ))
-                            }
+                            <div className="container">
+                                <div className="row">
+                                    {
+                                        menuBreakfastItem.map((item) => (
+                                            <div className="col-4">
+                                            <div className="card">
+                                                <div className="card-body">
+                                                    <h5 className="card-title">{item.title}</h5>
+                                                    <h6 className="card-subtitle mb-2 text-body-secondary">{item.description}</h6>
+                                                    <p className="card-text">${item.price}</p>
+                                                </div>
+                                            </div>  
+                                            </div>
+                                        ))
+                                    }
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

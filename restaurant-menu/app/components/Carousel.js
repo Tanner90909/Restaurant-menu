@@ -5,13 +5,13 @@ export default function Carousel(){
         <div id="carouselExample" className="carousel slide">
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                <Image className="d-block w-100" src="/img/bacon.jpg" height="650" width="550" alt="bacon" priority />
+                <Image className="d-block w-100" src="/img/bacon.jpg" height="550" width="550" alt="bacon" priority />
                 </div>
                 <div className="carousel-item">
-                <Image className="d-block w-100" src="/img/eggs.jpg" height="650" width="550" alt="eggs" priority />
+                <Image className="d-block w-100" src="/img/eggs.jpg" height="550" width="550" alt="eggs" priority />
                 </div>
                 <div className="carousel-item">
-                <Image className="d-block w-100" src="/img/waffles.jpg" height="650" width="550" alt="waffles" priority />
+                <Image className="d-block w-100" src="/img/waffles.jpg" height="550" width="550" alt="waffles" priority />
                 </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
