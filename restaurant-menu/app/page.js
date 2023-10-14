@@ -12,19 +12,18 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 
 export default function Home() {
-  const [state, setState] = useState([]);
+  const [menuData, setMenuData] = useState(null);
 
   useEffect(() => {
-  async function axiosCall() {
+  async function fetchData() {
   let response = await axios.get('https://www.jsonkeeper.com/b/MDXW');
-  setState(response)
-  console.log(state)
+  setMenuData(response.data)
+  console.log(response.data)
   };
-  axiosCall()
+  fetchData()
 }, []);
 
-
-console.log(state.data)
+console.log(menuData);
 
   return (
     <main className={styles.main}>
@@ -49,7 +48,9 @@ console.log(state.data)
         <div className='row text-center mt-5'>
           <h1>Menu</h1>
           <div className='col-12'>
-            <Accordion />
+            <Accordion menuData={menuData} text={"Drink"}/>
+            <Accordion menuData={menuData} text={"Appetizer"}/>
+            <Accordion menuData={menuData} text={"Breakfast"}/>
           </div>
         </div>
         <div className='row'>
