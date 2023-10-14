@@ -23,7 +23,7 @@ export default function Accordion({menuData}){
                                     {
                                         menuDrinkItem.map((item) => (
                                             <div className="col-4">
-                                            <div className="card">
+                                            <div className="card h100">
                                                 <div className="card-body">
                                                     <h5 className="card-title">{item.title}</h5>
                                                     <h6 className="card-subtitle mb-2 text-body-secondary">{item.description}</h6>
@@ -51,7 +51,7 @@ export default function Accordion({menuData}){
                                     {
                                         menuAppetizerItem.map((item) => (
                                             <div className="col-4">
-                                            <div className="card">
+                                            <div className="card h100">
                                                 <div className="card-body">
                                                     <h5 className="card-title">{item.title}</h5>
                                                     <h6 className="card-subtitle mb-2 text-body-secondary">{item.description}</h6>
@@ -79,7 +79,7 @@ export default function Accordion({menuData}){
                                     {
                                         menuBreakfastItem.map((item) => (
                                             <div className="col-4">
-                                            <div className="card">
+                                            <div className="card h-100">
                                                 <div className="card-body">
                                                     <h5 className="card-title">{item.title}</h5>
                                                     <h6 className="card-subtitle mb-2 text-body-secondary">{item.description}</h6>
