@@ -48,9 +48,7 @@ console.log(menuData);
         <div className='row text-center mt-5'>
           <h1>Menu</h1>
           <div className='col-12'>
-            <Accordion menuData={menuData} text={"Drink"}/>
-            <Accordion menuData={menuData} text={"Appetizer"}/>
-            <Accordion menuData={menuData} text={"Breakfast"}/>
+            <Accordion menuData={menuData}/>
           </div>
         </div>
         <div className='row'>
